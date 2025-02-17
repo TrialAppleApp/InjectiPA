@@ -26,3 +26,7 @@
 </div>
 
 <hr>
+
+## Demo video
+
+https://github.com/user-attachments/assets/eac2ad68-c05b-4dc4-91d3-aa769da33d53
