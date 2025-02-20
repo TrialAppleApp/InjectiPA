@@ -217,6 +217,13 @@
     </div>
 
     <div class="version-block">
+      <h2>1.0-4</h2>
+      <ul>
+        <li class="content-zh">支持deb文件</li>
+        <li class="content-en">Support deb files</li>
+      </ul>
+    </div>
+    <div class="version-block">
       <h2>1.0-3</h2>
       <ul>
         <li class="content-zh">添加在线升级</li>

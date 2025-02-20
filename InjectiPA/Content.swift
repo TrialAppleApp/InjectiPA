@@ -26,12 +26,19 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
 
+            Link(destination: URL(string: "https://github.com/TrialMacApp")!, label: {
+                Image(systemName: "link")
+                Text("Visit my GitHub page")
+            })
+            .font(.body.bold())
+            .padding(.top, 10)
+
             Spacer()
 
             FileSelectionRow(
                 icon: "doc.circle",
-                title: "Dylib File",
-                extensions: ["dylib"],
+                title: "Dylib/deb File",
+                extensions: ["dylib", "deb"],
                 selection: $dylibPath
             )
 
@@ -74,7 +81,7 @@ struct ContentView: View {
     }
 
     private func performInjection() {
-        // TODO 后续优化一下这里的交互
+        // TODO: 后续优化一下这里的交互
         alertMessage = String(localized: "injecting...")
         showAlert = true
 
@@ -90,6 +97,12 @@ struct ContentView: View {
         do {
             try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
             print("✅ 创建临时目录: \(tempDir.path)")
+
+            // 查看是deb还是dylib
+            if dylibPath!.pathExtension.lowercased() == "deb" {
+                let dylibName = try DebExtractor.debToDylib(debPath: dylibPath!, to: tempDir)
+                dylibPath = tempDir.appendingPathComponent(dylibName)
+            }
 
             // 解压 IPA
             let unzipDir = tempDir
@@ -151,12 +164,24 @@ struct ContentView: View {
         process.waitUntilExit()
     }
 
+    func generateNewIpaName(from url: URL) -> String {
+        // 获取文件名，去除扩展名
+        let fileNameWithoutExtension = url.deletingPathExtension().lastPathComponent
+
+        // 获取当前时间戳
+        let timestamp = Int(Date().timeIntervalSince1970)
+
+        // 组合新的文件名（加上时间戳后缀）
+        let newFileName = "\(fileNameWithoutExtension)_\(timestamp).ipa"
+        return newFileName
+    }
+
     func saveIPAFile(originalURL: URL) {
         let panel = NSSavePanel()
         panel.title = String(localized: "Save the modified IPA")
 //            panel.allowedContentTypes = [UTType(filenameExtension: "ipa")!]
         panel.allowedFileTypes = ["ipa"]
-        panel.nameFieldStringValue = "Modified.ipa"
+        panel.nameFieldStringValue = generateNewIpaName(from: ipaPath!)
 
         if panel.runModal() == .OK, let saveURL = panel.url {
             do {

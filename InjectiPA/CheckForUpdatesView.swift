@@ -45,6 +45,6 @@ class UpdaterManager {
 
     private init() {
         let controller = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
-        self.updater = controller.updater
+        updater = controller.updater
     }
 }

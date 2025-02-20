@@ -5,13 +5,13 @@
         <item>
             <title>1.0</title>
             <pubDate>Thu, 20 Feb 2025 09:47:19 +0800</pubDate>
-            <sparkle:version>3</sparkle:version>
+            <sparkle:version>4</sparkle:version>
             <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/TrialAppleApp/InjectiPA/releases/download/1.0-3/InjectiPA.tar" length="6161920" type="application/octet-stream" sparkle:edSignature="JdceMaeJAJeLbH0bhopnekxQefxJYHtk8Js7YbrhnXarGRe7Ty6oOGf2xHIDJE71+AcjhQ4sLF2E5bFqvLZMBg=="/>
-        <description><![CDATA[<h2>1.0-3</h2>
+            <enclosure url="https://github.com/TrialAppleApp/InjectiPA/releases/download/1.0-4/InjectiPA.tar" length="6214656" type="application/octet-stream" sparkle:edSignature="KWzs78NoGnf5PF3L/pqlzy3afas6Jlgsd/UYjSnmUl7eZ6+3amTr08OUrTnW039VzcMbHKCckZnROgfjL4SXDg=="/>
+        <description><![CDATA[<h2>1.0-4</h2>
 <ul>
-<li>Add online upgrade</li>
+<li>Support deb files</li>
 </ul>]]></description></item>
         </channel>
 </rss>
