@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>InjectiPA</title>
+        <item>
+            <title>1.0</title>
+            <pubDate>Thu, 20 Feb 2025 09:47:19 +0800</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/TrialAppleApp/InjectiPA/releases/download/1.0-3/InjectiPA.tar" length="6161920" type="application/octet-stream" sparkle:edSignature="JdceMaeJAJeLbH0bhopnekxQefxJYHtk8Js7YbrhnXarGRe7Ty6oOGf2xHIDJE71+AcjhQ4sLF2E5bFqvLZMBg=="/>
+        <description><![CDATA[<h2>1.0-3</h2>
+<ul>
+<li>Add online upgrade</li>
+</ul>]]></description></item>
+        </channel>
+</rss>

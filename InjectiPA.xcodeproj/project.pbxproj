@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7BBDBC682D66BD2B00E08EC6 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 7BBDBC672D66BD2B00E08EC6 /* Sparkle */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7B5A90352D62E1D700E9E07C /* InjectiPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InjectiPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7BBDBC6A2D66BDA000E08EC6 /* Exceptions for "InjectiPA" folder in "InjectiPA" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7B5A90342D62E1D700E9E07C /* InjectiPA */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7B5A90372D62E1D700E9E07C /* InjectiPA */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7BBDBC6A2D66BDA000E08EC6 /* Exceptions for "InjectiPA" folder in "InjectiPA" target */,
+			);
 			path = InjectiPA;
 			sourceTree = "<group>";
 		};
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBDBC682D66BD2B00E08EC6 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			);
 			name = InjectiPA;
 			packageProductDependencies = (
+				7BBDBC672D66BD2B00E08EC6 /* Sparkle */,
 			);
 			productName = InjectiPA;
 			productReference = 7B5A90352D62E1D700E9E07C /* InjectiPA.app */;
@@ -95,6 +114,9 @@
 			);
 			mainGroup = 7B5A902C2D62E1D700E9E07C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7BBDBC662D66BD2B00E08EC6 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7B5A90362D62E1D700E9E07C /* Products */;
 			projectDirPath = "";
@@ -254,11 +276,12 @@
 				CODE_SIGN_ENTITLEMENTS = InjectiPA/InjectiPA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"InjectiPA/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InjectiPA/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -281,11 +304,12 @@
 				CODE_SIGN_ENTITLEMENTS = InjectiPA/InjectiPA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"InjectiPA/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = InjectiPA/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,6 +346,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BBDBC662D66BD2B00E08EC6 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BBDBC672D66BD2B00E08EC6 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BBDBC662D66BD2B00E08EC6 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B5A902D2D62E1D700E9E07C /* Project object */;
 }
